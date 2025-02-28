@@ -42,7 +42,7 @@ dist-ssr
 /app/*.egg-info/
 /app/build/
 /app/htmlcov/
-/app/.evn
+/app/.env
 
 # SQLite Database (Python)
 /app/*.sqlite3
