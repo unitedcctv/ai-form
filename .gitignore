@@ -25,7 +25,7 @@ dist-ssr
 *.sw?
 
 # === Python (Under /app) ===
-/.venv/                     # Ignore root virtual environment
+/.venv/*                     # Ignore root virtual environment
 /app/__pycache__/
 /app/*.pyc
 /app/*.pyo
