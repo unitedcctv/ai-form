@@ -1,6 +1,6 @@
-# **LLM-Powered Registration App**
+# **AI-Powered Registration System**
 
-*A brief description of your project.*
+*AI-powered registration system built with FastAPI, React, LangGraph, DSPy, Guardrails AI, and MLflow. The system guides users through a structured conversation, collecting registration details while leveraging AI validation to ensure input accuracy.*
 
 ## **Project Structure**
 
@@ -15,7 +15,7 @@
 
 ---
 
-## **1️⃣ Setup and Run the FastAPI Backend**
+## **1️Setup and Run the FastAPI Backend**
 
 ### **Option 1: Run Locally**
 
@@ -93,7 +93,7 @@
 
 ---
 
-## **2️⃣ Setup and Run the React Frontend**
+## **2️Setup and Run the React Frontend**
 
 ### **Prerequisites**
 
@@ -126,11 +126,11 @@
 
 ---
 
-## **3️⃣ Environment Variables**
+## **3️Environment Variables**
 
 Create a `.env` file in both `/app` and `/frontend` and configure as needed:
 
-### **Backend (**``**)**
+### **Backend**
 
 ```ini
 OPENAI_API_KEY=your-api-key
@@ -139,7 +139,7 @@ MLFLOW_EXPERIMENT_NAME=your-experiment
 DATABASE_URL=sqlite:///./database.db  # or Snowflake credentials
 ```
 
-### **Frontend (**``**)**
+### **Frontend**
 
 ```ini
 VITE_API_URL=http://localhost:8000
