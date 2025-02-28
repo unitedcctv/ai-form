@@ -1,0 +1,93 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+:root {
+  --bg-color: #f9f9f9; /* light background */
+  --text-color: #000;  /* light text */
+}
+
+/* When user/browser goes to dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #2c2c2c; /* dark background */
+    --text-color: #fff;  /* dark text */
+  }
+}
+
+.chat-container {
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.chat-box {
+  min-height: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  overflow-y: auto;
+  color: #000;
+  text-align: left;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+@keyframes dots {
+  0% { content: "."; }
+  33% { content: ".."; }
+  66% { content: "..."; }
+  100% { content: ""; }
+}
+
+.dots::after {
+  content: "";
+  display: inline-block;
+  animation: dots 1.5s steps(1, end) infinite;
+}
