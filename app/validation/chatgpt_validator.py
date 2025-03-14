@@ -1,10 +1,10 @@
 import openai
-import guardrails as gd
+import guardrails as gd  # type: ignore
 import json
 from typing import Dict
-from validation.base_validator import BaseValidator
-from validation.validated_response import ValidatedLLMResponse
-from helpers.config import OPENAI_API_KEY, MLFLOW_ENABLED, MLFLOW_EXPERIMENT_NAME
+from .base_validator import BaseValidator
+from .validated_response import ValidatedLLMResponse
+from ..helpers.config import OPENAI_API_KEY, MLFLOW_ENABLED, MLFLOW_EXPERIMENT_NAME
 import mlflow
 
 if MLFLOW_ENABLED:
@@ -42,7 +42,7 @@ class ChatGPTValidator(BaseValidator):
         )
 
         try:
-            validation_str = response.choices[0].message.content.strip()
+            validation_str = response.choices[0].message.content.strip() if response.choices[0].message.content else ""
             validation_result = json.loads(validation_str)
             print(validation_result)
 

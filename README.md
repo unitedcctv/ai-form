@@ -1,4 +1,4 @@
-# **AI-Powered Registration System**
+# **AI-Powered Form**
 
 *AI-powered registration system built with FastAPI, React, LangGraph, DSPy, Guardrails AI, and MLflow. The system guides users through a structured conversation, collecting registration details while leveraging AI validation to ensure input accuracy.*
 

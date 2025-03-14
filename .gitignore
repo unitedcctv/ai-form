@@ -25,6 +25,7 @@ dist-ssr
 *.sw?
 
 # === Python (Under /app) ===
+.venv
 /.venv/*                     # Ignore root virtual environment
 /app/__pycache__/
 /app/*.pyc
@@ -71,6 +72,7 @@ dist-ssr
 /frontend/.stylelintcache
 /frontend/coverage/
 /frontend/.cache/
+/frontend/.env
 
 # Miscellaneous
 *.bak

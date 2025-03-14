@@ -70,8 +70,6 @@ guardrails-api-client==0.4.0a1
 guardrails_hub_types==0.0.4
 gunicorn==22.0.0
 h11==0.14.0
-httpcore==0.17.3
-httpx==0.24.1
 httpx-sse==0.4.0
 huggingface-hub==0.28.1
 humanfriendly==10.0

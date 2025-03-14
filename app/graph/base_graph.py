@@ -1,8 +1,7 @@
 from langgraph.graph import StateGraph, END
-from helpers.config import GRAPH_OUTPUT_DIR
+from ..helpers.config import GRAPH_OUTPUT_DIR
 import logging
 import os
-
 
 class BaseGraphManager:
     """A generic graph manager that builds and runs a state machine from a question map."""
