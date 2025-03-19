@@ -1,6 +1,6 @@
 from .dspy_validator import DSPyValidator
 from .chatgpt_validator import ChatGPTValidator
-from ..helpers.config import VALIDATION_ENGINE
+from helpers.config import VALIDATION_ENGINE
 
 
 class ValidatorFactory:

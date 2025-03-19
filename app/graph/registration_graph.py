@@ -1,6 +1,6 @@
 from langgraph.graph import END
-from ..db.sqlite_db import RegistrationState
-from ..graph.base_graph import BaseGraphManager
+from db.sqlite_db import RegistrationState
+from graph.base_graph import BaseGraphManager
 import logging
 
 

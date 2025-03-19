@@ -1,13 +1,13 @@
-import guardrails as gd  # type: ignore
-import dspy  # type: ignore
-from .base_validator import BaseValidator
+import guardrails as gd
+import dspy
+from validation.base_validator import BaseValidator
 from pydantic import ValidationError
-from .validated_response import ValidatedLLMResponse
+from validation.validated_response import ValidatedLLMResponse
 from typing import Literal
 import logging
 import json
 import mlflow
-from ..helpers.config import OPENAI_API_KEY, MLFLOW_ENABLED, MLFLOW_EXPERIMENT_NAME
+from helpers.config import OPENAI_API_KEY, MLFLOW_ENABLED, MLFLOW_EXPERIMENT_NAME
 
 dspy.settings.configure(lm=dspy.LM(model="gpt-3.5-turbo", api_key=OPENAI_API_KEY))
 

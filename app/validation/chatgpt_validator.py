@@ -1,10 +1,10 @@
 import openai
-import guardrails as gd  # type: ignore
+import guardrails as gd
 import json
 from typing import Dict
-from .base_validator import BaseValidator
-from .validated_response import ValidatedLLMResponse
-from ..helpers.config import OPENAI_API_KEY, MLFLOW_ENABLED, MLFLOW_EXPERIMENT_NAME
+from validation.base_validator import BaseValidator
+from validation.validated_response import ValidatedLLMResponse
+from helpers.config import OPENAI_API_KEY, MLFLOW_ENABLED, MLFLOW_EXPERIMENT_NAME
 import mlflow
 
 if MLFLOW_ENABLED:

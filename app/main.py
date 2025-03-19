@@ -91,7 +91,10 @@ def submit_response(response: dict):
         logging.info(f"skip_{node_key}")
         current_state[f"skip_{node_key}"] = True
 
-    user_answer = response.get("answer", "")
+    user_answer = response.get("answer")
+    if user_answer is None:
+        return {"error": "Missing answer"}
+    user_answer = str(user_answer)
     current_question = current_state["current_question"]
     current_node = current_state["current_node"]
 
@@ -173,13 +176,15 @@ def edit_field(request: dict):
         logging.error("Session not found. Please restart registration.")
         return {"error": "Session not found. Please restart registration."}
 
+    if not isinstance(field_to_edit, str):
+        return {"error": "Invalid field_to_edit: must be a string"}
     question_text = registration_questions.get(field_to_edit)
     if not question_text:
         logging.error(f"Invalid field_to_edit: {field_to_edit}")
         return {"error": f"Invalid field_to_edit: {field_to_edit}"}
 
     validation_result = validate_user_input(
-        question=question_text, user_answer=new_value
+        question=question_text, user_answer=str(new_value)
     )
 
     if validation_result["status"] == "clarify":

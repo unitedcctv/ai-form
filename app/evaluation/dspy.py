@@ -2,7 +2,7 @@ import mlflow
 from typing import List, Dict
 
 # Import your custom DSPyValidator
-from validation.dspy_validator import DSPyValidator
+from app.validation.dspy_validator import DSPyValidator  # Update to use absolute import
 
 # Example test dataset
 # Each sample has: question, user_answer, expected_status, expected_formatted_answer
