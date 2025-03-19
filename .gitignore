@@ -28,7 +28,9 @@ dist-ssr
 .venv
 /.venv/*                     # Ignore root virtual environment
 /app/__pycache__/
+/app/**/__pycache__/
 /app/*.pyc
+/app/**/*.pyc
 /app/*.pyo
 /app/.pytest_cache/
 /app/.mypy_cache/
