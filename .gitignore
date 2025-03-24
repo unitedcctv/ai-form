@@ -15,6 +15,7 @@ dist-ssr
 
 # Editor directories and files
 .vscode/*
+.vscode
 !.vscode/extensions.json
 .idea
 .DS_Store
@@ -49,7 +50,7 @@ dist-ssr
 
 # SQLite Database (Python)
 /app/*.sqlite3
-/app/*.db
+/app/**/*.db
 /app/*.sqlite
 /app/db.sqlite3
 /app/instance/
